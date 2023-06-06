@@ -1,0 +1,30 @@
+https://stackoverflow.com/questions/9234560/find-all-csv-files-in-a-directory-using-python
+https://www.geeksforgeeks.org/how-to-create-an-empty-dataframe-and-append-rows-columns-to-it-in-pandas/
+https://www.geeksforgeeks.org/how-to-add-one-row-in-an-existing-pandas-dataframe/
+https://stackoverflow.com/questions/19632075/how-to-read-file-with-space-separated-values-in-pandas
+https://stackoverflow.com/questions/19482970/get-a-list-from-pandas-dataframe-column-headers
+https://www.programiz.com/python-programming/methods/built-in/round
+https://towardsdatascience.com/the-5-feature-selection-algorithms-every-data-scientist-need-to-know-3a6b566efd2
+https://stats.stackexchange.com/questions/50807/features-for-time-series-classification
+https://stats.stackexchange.com/questions/72501/extract-important-features
+----------------------
+ChatGPT:
+
+what is 90% bootsrap confidence interval for the standard deviation of each feature?
+
+Bootstrapping is a resampling method used to estimate the sampling distribution of a statistic from a single sample by resampling with replacement from the original data set. To obtain the 90% bootstrap confidence interval for the standard deviation of each feature, you can follow these steps:
+
+Take a bootstrap sample of the original dataset with replacement. This sample should have the same size as the original dataset.
+
+Calculate the standard deviation of each feature in the bootstrap sample.
+
+Repeat steps 1 and 2 a large number of times, say B = 1000.
+
+Calculate the 5th and 95th percentiles of the distribution of the standard deviations for each feature across the B bootstrap samples. These percentiles give you the 90% bootstrap confidence interval for the standard deviation of each feature.
+
+Note that the specific implementation of these steps may depend on the software you are using.
+
+----------------------
+Explain what is 90% bootsrap confidence interval with an example
+
+For example, let's say we have a dataset of 100 observations and we want to estimate the standard deviation of a certain feature. We can use bootstrapping to generate 1000 samples from the original dataset with replacement and calculate the standard deviation for each sample. Using these computed standard deviations, we can then construct a 90% bootstrap confidence interval by taking the 5th and 95th percentiles of the sample distribution. This interval would represent the range of values within which we can be 90% confident that the true standard deviation of the feature lies.

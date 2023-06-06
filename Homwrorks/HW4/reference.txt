@@ -1,0 +1,146 @@
+https://stackoverflow.com/questions/9234560/find-all-csv-files-in-a-directory-using-python
+https://www.geeksforgeeks.org/how-to-create-an-empt
+y-dataframe-and-append-rows-columns-to-it-in-pandas/
+https://www.geeksforgeeks.org/how-to-add-one-row-in-an-existing-pandas-dataframe/
+https://stackoverflow.com/questions/19632075/how-to-read-file-with-space-separated-values-in-pandas
+https://stackoverflow.com/questions/19482970/get-a-list-from-pandas-dataframe-column-headers
+https://www.programiz.com/python-programming/methods/built-in/round
+https://towardsdatascience.com/the-5-feature-selection-algorithms-every-data-scientist-need-to-know-3a6b566efd2
+https://stats.stackexchange.com/questions/50807/features-for-time-series-classification
+https://stats.stackexchange.com/questions/72501/extract-important-features
+https://stackoverflow.com/questions/13411544/delete-a-column-from-a-pandas-dataframe
+https://medium.com/@morganjonesartist/color-guide-to-seaborn-palettes-da849406d44f
+https://www.geeksforgeeks.org/how-to-rename-columns-in-pandas-dataframe/
+https://www.geeksforgeeks.org/add-a-keyvalue-pair-to-dictionary-in-python/
+https://www.ocpsoft.org/tutorials/regular-expressions/or-in-regex/
+https://stackoverflow.com/questions/16923281/writing-a-pandas-dataframe-to-csv-file
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_csv.html
+https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop.html
+https://scikit-learn.org/stable/modules/generated/sklearn.metrics.roc_curve.html
+----------------------
+ChatGPT:
+
+what is 90% bootsrap confidence interval for the standard deviation of each feature?
+
+Bootstrapping is a resampling method used to estimate the sampling distribution of a statistic from a single sample by resampling with replacement from the original data set. To obtain the 90% bootstrap confidence interval for the standard deviation of each feature, you can follow these steps:
+
+Take a bootstrap sample of the original dataset with replacement. This sample should have the same size as the original dataset.
+
+Calculate the standard deviation of each feature in the bootstrap sample.
+
+Repeat steps 1 and 2 a large number of times, say B = 1000.
+
+Calculate the 5th and 95th percentiles of the distribution of the standard deviations for each feature across the B bootstrap samples. These percentiles give you the 90% bootstrap confidence interval for the standard deviation of each feature.
+
+Note that the specific implementation of these steps may depend on the software you are using.
+
+----------------------
+Explain what is 90% bootsrap confidence interval with an example
+
+For example, let's say we have a dataset of 100 observations and we want to estimate the standard deviation of a certain feature. We can use bootstrapping to generate 1000 samples from the original dataset with replacement and calculate the standard deviation for each sample. Using these computed standard deviations, we can then construct a 90% bootstrap confidence interval by taking the 5th and 95th percentiles of the sample distribution. This interval would represent the range of values within which we can be 90% confident that the true standard deviation of the feature lies.
+
+--------------------
+
+The hue parameter in Seaborn's pairplot() function is used to specify a categorical variable that will determine the color of the points in the scatterplot matrix. Here is an example of how to use the hue parameter in pairplot():
+
+import seaborn as sns
+import pandas as pd
+
+# load the iris dataset
+iris = sns.load_dataset('iris')
+
+# create a pairplot with hue set to the 'species' column
+sns.pairplot(iris, hue='species')
+
+# show the plot
+plt.show()
+In this example, the hue parameter is set to the 'species' column of the iris dataset. This will create a scatterplot matrix where each point is colored according to the species of the iris flower it represents. The resulting plot will have 3 different colors, one for each species of iris (setosa, versicolor, and virginica).
+---------------------
+apply() Example:
+
+import pandas as pd
+
+# create a sample DataFrame
+df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
+
+# define a function to calculate a new number based on the values in each row
+def calculate_new_number(row):
+    return row['A'] * row['B']
+
+# apply the function to each row and assign the result to a new column in the DataFrame
+df['new_number'] = df.apply(calculate_new_number, axis=1)
+
+# print the updated DataFrame
+print(df)
+---------------------
+A confusion matrix consists of four metrics: true positive (TP), false positive (FP), true negative (TN), and false negative (FN). TP refers to the number of positive instances that are correctly predicted as positive. FP refers to the number of negative instances that are incorrectly predicted as positive. TN refers to the number of negative instances that are correctly predicted as negative. FN refers to the number of positive instances that are incorrectly predicted as negative.
+
+ROC (Receiver Operating Characteristic) curve is a graphical representation of the performance of a binary classifier. It plots the true positive rate (TPR) against the false positive rate (FPR) for different classification thresholds. The area under the ROC curve (AUC) is a measure of the performance of a classifier. A perfect classifier has an AUC of 1, while a random classifier has an AUC of 0.5.
+
+The confusion matrix and the ROC curve are commonly used together to evaluate the performance of a binary classifier. The confusion matrix provides a more detailed view of the classifier's performance, while the ROC cur
+----------------------
+L1-penalized logistic regression, also known as Lasso logistic regression, is a regularization technique that can be used for variable selection in logistic regression models. Instead of using p-values for variable selection, L1 regularization adds a penalty term to the logistic regression objective function that encourages coefficients to be exactly zero, effectively selecting only the most important variables.
+
+To use L1-penalized logistic regression, you will need to specify a value for the regularization parameter, λ, which controls the strength of the penalty term. Larger values of λ will result in more aggressive variable selection, while smaller values will allow more variables to be included in the model.
+
+To choose an appropriate value for λ, you will need to perform cross-validation, which involves dividing your data into training and validation sets, fitting a model on the training set, and evaluating its performance on the validation set. This process is repeated multiple times, with different subsets of the data used for training and validation, to get a more accurate estimate of model performance.
+
+In addition to cross-validation for λ, you may also want to perform cross-validation for the number of time series into which you break each instance, l. This can help you determine the optimal number of time series to use in your model and avoid overfitting.
+
+Many machine learning packages, such as scikit-learn in Python, have built-in functions for performing L1-penalized logistic regression with cross-validation for λ. You can specify the range of λ values to try and the number of folds for cross-validation, and the package will return the optimal value of λ and the corresponding coefficients for each variable.
+
+------------------
+To find the best value of l for L1-penalized multinomial regression, we can use the same approach as before:
+
+Split the training data into training and validation sets.
+Standardize the data using the training set.
+Perform cross-validation with a range of l values.
+Choose the value of l with the highest accuracy on the validation set.
+Train the model with the chosen value of l on the entire training set.
+Evaluate the model on the test set and report the test error.
+To use a Naive Bayes classifier, we can first try both Gaussian and Multinomial priors and compare their performance. The steps for training and evaluation would be:
+
+Split the data into training and test sets.
+Standardize the data using the training set.
+Train a Naive Bayes classifier with Gaussian priors on the training set.
+Evaluate the classifier on the test set and report the test error.
+Train a Naive Bayes classifier with Multinomial priors on the training set.
+Evaluate the classifier on the test set and report the test error.
+Compare the test errors of both classifiers and choose the better one.
+For confusion matrices and ROC curves in multiclass classification, we can calculate the true positive, false positive, true negative, and false negative rates for each class separately and then average them over all classes. The resulting confusion matrix and ROC curve would have one row and column for each class. However, it's not possible to show them for this problem without the actual data and labels.
+
+------------------
+roc_curve multiclass example
+The roc_curve() function can also be used for multiclass classification problems by computing the ROC curve for each class separately. Here is an example of how to use roc_curve() for multiclass classification:
+
+from sklearn.metrics import roc_curve, auc
+import numpy as np
+
+# Generate some example data
+np.random.seed(42)
+n_classes = 3
+n_samples = 1000
+testY = np.random.randint(0, n_classes, size=n_samples)
+y_scores = np.random.rand(n_samples, n_classes)
+
+# Compute ROC curve and ROC area for each class
+fpr = dict()
+tpr = dict()
+roc_auc = dict()
+for i in range(n_classes):
+    fpr[i], tpr[i], _ = roc_curve(testY == i, y_scores[:, i])
+    roc_auc[i] = auc(fpr[i], tpr[i])
+
+# Plot ROC curve for each class
+import matplotlib.pyplot as plt
+plt.figure(figsize=(8, 6))
+for i in range(n_classes):
+    plt.plot(fpr[i], tpr[i], label='Class {0} (AUC = {1:0.2f})'.format(i, roc_auc[i]))
+plt.plot([0, 1], [0, 1], 'k--')
+plt.xlim([0.0, 1.0])
+plt.ylim([0.0, 1.05])
+plt.xlabel('False Positive Rate')
+plt.ylabel('True Positive Rate')
+plt.title('Receiver Operating Characteristic')
+plt.legend(loc="lower right")
+plt.show()
