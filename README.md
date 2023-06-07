@@ -12,4 +12,4 @@ HWs:
 6) **Tree-Based Methods:**<br/>https://github.com/ehsankhaligh/DSCI552-Machine-Learning-for-Data-Science/tree/main/Homwrorks/HW6<br/><br/>
 7) **Multi-class and Multi-Label Classification Using Support Vector Machines:**<br/>https://github.com/ehsankhaligh/DSCI552-Machine-Learning-for-Data-Science/tree/main/Homwrorks/HW7<br/><br/>
 8) **Supervised, Semi-Supervised, and Unsupervised Learning:**<br/>https://github.com/ehsankhaligh/DSCI552-Machine-Learning-for-Data-Science/tree/main/Homwrorks/HW8<br/><br/>
-9) **Transfer Learning for Video Classification1**<br/>https://github.com/ehsankhaligh/DSCI552-Machine-Learning-for-Data-Science/tree/main/Homwrorks/Project<br/><br/>
+9) **Transfer Learning for Video Classification:**<br/>https://github.com/ehsankhaligh/DSCI552-Machine-Learning-for-Data-Science/tree/main/Homwrorks/Project<br/><br/>
